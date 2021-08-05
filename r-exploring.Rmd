@@ -1,0 +1,54 @@
+---
+title: "R Exploring"
+author: "Wylie Hampson"
+date: "8/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(GGally)
+library(skimr)
+library(palmerpenguins)
+```
+
+## Rapid fire tools for data exploration
+
+```{r}
+# Return the names of all variables
+names(penguins)
+
+# Dimensions
+dim(penguins)
+
+# Get an overall summary of the data
+summary(penguins)
+
+# Look at the first few lines
+head(penguins, 3)
+
+# Look at the last six lines
+tail(penguins)
+
+# Use GGally::ggpairs()
+# GGally::ggpairs(penguins)
+
+# Use skimr::skim()
+skimr::skim(penguins)
+
+# Histogram of flipper lengths
+ggplot(data = penguins, aes(x = flipper_length_mm)) +
+  geom_histogram() +
+  facet_wrap(~species)
+
+# Make a faceted histogram of penguin bill_length_mm, faceted by island
+ggplot(data = penguins, aes(x = bill_length_mm)) +
+  geom_histogram() +
+  facet_wrap(~island)
+
+```
+
+
+
+
+
