@@ -1,0 +1,46 @@
+---
+title: "My Fancy RMD"
+subtitle : "Some changes in YWML"
+author: "Wylie Hampson"
+output: 
+  html_document:
+    theme: journal
+    toc: true
+    toc_float: true
+    number_sections: true
+    code_folding: hide
+    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Getting Started!
+
+## My first chapter
+
+### Preface
+
+Something awesome
+
+```{r}
+a <- 10
+b <- 25
+teddy <- a + b
+```
+
+# Part Banana
+
+## My second chapter
+
+### A note on something
+
+```{r}
+mean(mtcars$mpg)
+
+a + b
+
+teddy
+```
+
